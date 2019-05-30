@@ -1,12 +1,5 @@
-"use strict";
 class Socks extends Product {
-    construct(attributes) {
-        super.construct();
-        this.attributes = attributes;
-    }
-
-    buy() {
-        this.price--;
-        return true;
+    constructor(id, name, description, images, price, inStock) {
+        super(id, name, description, images, price, inStock);
     }
 }
