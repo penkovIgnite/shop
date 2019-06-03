@@ -8,5 +8,6 @@
 	font-size: 20px;
 }
 .product-button {
-	width: 100%;
+	position: absolute;
+	bottom: 0;
 }

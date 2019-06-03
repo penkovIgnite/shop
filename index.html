@@ -1,81 +1,102 @@
 <html>
-    <head>
-        <title>Shop - Project by Pragmatic</title>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-        <script src="header.js"></script>
-        <script src="ProductClass.js"></script>
-        <script src="SocksClass.js"></script>
-        <script src="DisplayProductClass.js"></script>
-        
-    </head>
-    <body>
-        <div class="container mt-5">
-            <div class="navigation"></div>
-            <div class="products row p-4"></div>
-        </div>
-    </body>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            let dummySocks = [
-                {
-                    id: 1,
-                    name: "Happy Socks",
-                    description: "Best socks ever",
-                    images: 'socks.png',
-                    price: 10,
-                    inStock: 10
-                }, {
-                    id: 2,
-                    name: "Happy Socks",
-                    description: "Best socks ever",
-                    images: 'socks.png',
-                    price: 20,
-                    inStock: 10
-                }, {
-                    id: 3,
-                    name: "Happy Socks",
-                    description: "Best socks ever",
-                    images: 'socks.png',
-                    price: 10,
-                    inStock: 10
-                }, {
-                    id: 4,
-                    name: "Happy Socks",
-                    description: "Best socks ever",
-                    images: 'socks.png',
-                    price: 10,
-                    inStock: 10
-                }, {
-                    id: 5,
-                    name: "Happy Socks",
-                    description: "Best socks ever",
-                    images: 'socks.png',
-                    price: 10,
-                    inStock: 10
-                }
-            ];
+	<head>
+		<title>Shop - Project by Pragmatic</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+		<script src="header.js"></script>
+		<script src="ProductClass.js"></script>
+		<script src="SocksClass.js"></script>
+		<script src="CapClass.js"></script>
+		<script src="TshirtClass.js"></script>
+		<script src="DisplayProductClass.js"></script>
+	</head>
+	<body>
+		<div class="container mt-5">
+			<div class="navigation"></div>
+			<div class="products row p-4"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			let dummyProducts = [
+				{
+					id: 1,
+					name: "Happy Socks",
+					description: "Best socks ever",
+					images: 'img/socks.png',
+					price: 10,
+					inStock: 10
+				}, {
+					id: 2,
+					name: "Junak Cap",
+					description: "Very best original new era cap",
+					images: 'img/cap.png',
+					price: 20,
+					inStock: 10
+				}, {
+					id: 3,
+					name: "T-shirt",
+					description: "Basic t-shirt",
+					images: 'img/t-shirt.png',
+					price: 10,
+					inStock: 10,
+					attributes: [
+						{
+							color: "red",
+							price: 5,
+							inStock: 3
+						}, {
+							color: "green",
+							price: 8,
+							inStock: 12
+						}
+					]
+				}
+			];
 
-            let products = [];
-            for(let i in dummySocks) {
-                let dummySock = dummySocks[i];
+			let products = [];
 
-                let product = new Socks(dummySock.id, dummySock.name, dummySock.description, dummySock.images, dummySock.price, dummySock.inStock);
-                products.push(product);
-            }
+			let socks = new Socks(
+				dummyProducts[0].id,
+				dummyProducts[0].name,
+				dummyProducts[0].description,
+				dummyProducts[0].images,
+				dummyProducts[0].price,
+				dummyProducts[0].inStock
+			);
+			products.push(socks);
 
+			let cap = new Cap(
+				dummyProducts[1].id,
+				dummyProducts[1].name,
+				dummyProducts[1].description,
+				dummyProducts[1].images,
+				dummyProducts[1].price,
+				dummyProducts[1].inStock
+			);
+			products.push(cap);
 
-            for(let i in products) {
-                let displayProduct = new DisplayProduct(products[i]);
+			let tshirt = new Tshirt(
+				dummyProducts[2].id,
+				dummyProducts[2].name,
+				dummyProducts[2].description,
+				dummyProducts[2].images,
+				dummyProducts[2].price,
+				dummyProducts[2].inStock
+			);
+			products.push(tshirt);
 
-                $('.products').append(displayProduct.display());
-            }
-        });
-    </script>
+			for(let i in products) {
+				let displayProduct = new DisplayProduct(products[i]);
+
+				$('.products').append(displayProduct.display());
+			}
+		});
+	</script>
 </html>
 
