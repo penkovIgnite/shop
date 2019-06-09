@@ -11,3 +11,10 @@
 	position: absolute;
 	bottom: 0;
 }
+.quantity {
+	cursor: pointer;
+	font-size: 15px;
+	padding: 8px 10px;
+	box-shadow: 1px 5px 10px #d4d4d4;
+	border-radius: 50px;
+}

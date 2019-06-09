@@ -19,15 +19,17 @@ $(document).ready(function() {
     let menu = $("<div>", {class: "collapse navbar-collapse", id: "navbarText"});
     let ulMenu = $("<ul>", {class: "navbar-nav mr-auto"});
     let liMenu = $("<li>", {class: "nav-item active"});
-    let aLiMenu = $("<a>", {href: "#", class: "nav-link", text: "Home"});
+    let aLiMenu = $("<a>", {href: "index.html", class: "nav-link", text: "Home"});
     liMenu.append(aLiMenu)
     ulMenu.append(liMenu);
     menu.append(ulMenu);
     nav.append(menu);
 
-    let cart = $("<button>", {class: "btn btn-secondary my-2 my-sm-0"});
+    let cart = $("<a>", {href: "cart.html", class: "btn btn-secondary my-2 my-sm-0"});
     let cartIcon = $("<i>", {class: "fa fa-shopping-bag"});
+    let badge = $("<span>", {class: "badge badge-light ml-2", text: 0});
     cart.append(cartIcon);
+    cart.append(badge);
     nav.append(cart);
 
     $(".navigation").append(nav);

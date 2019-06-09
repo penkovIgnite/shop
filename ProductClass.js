@@ -4,6 +4,6 @@ class Product {
     }
 
     buy() {
-        return undefined;
+        return this.inStock--;
     }
 }
