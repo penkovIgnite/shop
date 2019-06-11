@@ -1,6 +1,5 @@
 class Tshirt extends Product {
-    constructor(id, name, description, images, price, inStock, attributes) {
+    constructor(id, name, description, images, price, inStock) {
         super(id, name, description, images, price, inStock);
-        this.attributes = attributes;
     }
 }

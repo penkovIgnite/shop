@@ -110,13 +110,22 @@
                     totalPrice += product.quantity * product.price;
                 }
 
+                if($('#email').val() != $('#re-email').val()) {
+                    swal({
+                        title: 'An error occurred',
+                        text: "Еmails do not match!",
+                        icon: "error"
+                    });
+                }
+
+
                 swal({
                     title: 'Thank you for your purchase!',
                     text: 'Hello ' + $('#firstName').val() + ' ' + $('#lastName').val() + '.Your Order is number ' + Math.floor(Math.random() * 9999) + 
                     '\nYou ordered: ' + orderProduct + '\n Total Price: ' + totalPrice + 'лв.' +
                     '\n Delivery to: ' + $('#city').val() + ' ' + $('#address').val() + ' ' + $('#address2').val() + ' ' + $('#zip').val() +
                     '\n For contact: ' + $('#email').val(),
-                    icon: "success",
+                    icon: "success"
                 });
 
                 $('#checkout-form').addClass('d-none');
