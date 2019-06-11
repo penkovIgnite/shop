@@ -1,2 +1,2 @@
-# shop
-project from curs FrontEnd JS by Pragmatic
+# SHOP
+Project from cours FrontEnd JS by Pragmatic
